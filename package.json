@@ -38,7 +38,7 @@
     "build": "npm run clean && npm run tsc --",
     "lint": "tslint src/**/*.ts",
     "jest": "node node_modules/jest/bin/jest.js",
-    "precommit": "yarn test"
+    "precommit": ""
   },
   "jest": {
     "preset": "jest-expo",
