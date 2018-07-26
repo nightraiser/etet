@@ -1,7 +1,7 @@
 {
   "expo": {
     "sdkVersion": "24.0.0",
-    "slug": "React-Native-Seed",
+    "slug": "Eschools",
     "loading": {
       "hideExponentText": false,
       "icon": "./assets/loading.png"
@@ -11,10 +11,10 @@
     "packagerOpts": {
       "assetExts": ["ttf"]
     },
-    "androidStatusBarColor": "#334393",
+    "androidStatusBarColor": "#27ae60",
     "androidStatusBar": {
       "barStyle": "light-content",
-      "backgroundColor": "#334393"
+      "backgroundColor": "#27ae60"
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "ReactNativeSeed",
+  "name": "ESchoolz",
   "version": "1.1.0",
   "private": true,
   "devDependencies": {
@@ -38,7 +38,6 @@
     "build": "npm run clean && npm run tsc --",
     "lint": "tslint src/**/*.ts",
     "jest": "node node_modules/jest/bin/jest.js",
-    "precommit": ""
   },
   "jest": {
     "preset": "jest-expo",
