@@ -1,15 +1,15 @@
 import * as React from "react";
-import { Container, Header, Title, Content, Text, Button, Icon, Left, Right, Body } from "native-base";
+import { Container, Header, Title, Content, Button, Icon, Left, Right, Body} from "native-base";
+import GridNavigation from "../../../components/GridNavigation";
 import FooterNavigation from "../../../components/FooterNavigation";
 import styles from "./styles";
 export interface Props {
 	navigation: any;
 }
 export interface State {}
-class BlankPage extends React.Component<Props, State> {
+class DistrictHomePage extends React.Component<Props, State> {
 	render() {
 		const param = this.props.navigation.state.params;
-		console.log(this.props);
 		return (
 			<Container style={styles.container}>
 				<Header>
@@ -20,20 +20,19 @@ class BlankPage extends React.Component<Props, State> {
 					</Left>
 
 					<Body style={{ flex: 3 }}>
-						<Title>{param ? param.name : "Blank Page"}</Title>
+						<Title>{param ? param.name.item : "District Home"}</Title>
 					</Body>
 
 					<Right />
 				</Header>
 
 				<Content padder>
-					<Text>{"Coming Soon"}</Text>
+					<GridNavigation navigation={this.props.navigation} />
 				</Content>
-
-				<FooterNavigation navigation={this.props.navigation} current={param.name} />
+				<FooterNavigation current="Home" navigation={this.props.navigation} />
 			</Container>
 		);
 	}
 }
 
-export default BlankPage;
+export default DistrictHomePage;

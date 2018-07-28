@@ -2,9 +2,10 @@
   "expo": {
     "sdkVersion": "24.0.0",
     "slug": "Eschools",
+    "privacy":"unlisted",
     "loading": {
       "hideExponentText": false,
-      "icon": "./assets/loading.png"
+      "icon": "./assets/logo.png"
     },
     "orientation": "portrait",
     "primaryColor": "#cccccc",

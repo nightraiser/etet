@@ -58,7 +58,7 @@ class LoginForm extends React.Component<Props, State> {
 				/>
 			</Form>
 		);
-		return <Login loginForm={form} onLogin={() => this.login()} />;
+		return <Login navigation = {this.props.navigation} loginForm={form} onLogin={() => this.login()} />;
 	}
 }
 const LoginContainer = reduxForm({
