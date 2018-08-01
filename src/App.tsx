@@ -10,6 +10,7 @@ import Home from "./container/HomeContainer";
 import BlankPage from "./container/BlankPageContainer";
 import Sidebar from "./container/SidebarContainer";
 import DistrictHomePage from "./container/DistrictHomePageContainer";
+import SearchPage from "./container/SearchPageContainer";
 const Drawer = DrawerNavigator(
 	{
 		Home: { screen: Home },
@@ -27,6 +28,7 @@ const App = StackNavigator(
 		DistrictHomePage: { screen: DistrictHomePage },
 		BlankPage: { screen: BlankPage },
 		Drawer: { screen: Drawer },
+		SearchPage: { screen: SearchPage },
 	},
 	{
 		initialRouteName: "Home",
