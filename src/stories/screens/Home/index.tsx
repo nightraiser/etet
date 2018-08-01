@@ -1,17 +1,23 @@
 import * as React from "react";
 import {
+  Image,
+} from "react-native";
+import {
   Container,
-  Header,
   Title,
   Content,
   Text,
   Button,
   Icon,
-  Left,
-  Body,
-  Right,
-  List,
-  ListItem
+  Tabs,
+  Tab,
+  TabHeading,
+  View,
+  Form,
+  Item,
+  Input,
+  Row,
+  Col,
 } from "native-base";
 
 import styles from "./styles";
@@ -20,39 +26,50 @@ export interface Props {
   list: any;
 }
 export interface State {}
+const logo = require("../../../../assets/logo.png");
 class Home extends React.Component<Props, State> {
   render() {
     return (
-      <Container style={styles.container}>
-        <Header>
-          <Left>
-            <Button transparent>
-              <Icon
-                active
-                name="menu"
-                onPress={() => this.props.navigation.navigate("DrawerOpen")}
-              />
-            </Button>
-          </Left>
-          <Body>
-            <Title>Home</Title>
-          </Body>
-          <Right />
-        </Header>
-        <Content>
-          <List>
-            {this.props.list.map((item, i) => (
-              <ListItem
-                key={i}
-                onPress={() =>
-                  this.props.navigation.navigate("BlankPage", {
-                    name: { item }
-                  })}
-              >
-                <Text>{item}</Text>
-              </ListItem>
-            ))}
-          </List>
+      <Container>
+        <Content style={{ backgroundColor: "#fff" }}>
+          <View style={{ flex: 1, flexDirection: "column" }}>
+            <View style={{ flex: 1, backgroundColor: "#fff", marginTop: 10 }}>
+              <View style={{ alignItems: "center" }}>
+                <Image source={logo} style={{ height: 178, marginTop: 10 }} />
+                <Title>ESchoolz</Title>
+              </View>
+            </View>
+            <View style={{ flex: 1 }}>
+              <Tabs>
+                <Tab heading={<TabHeading><Text>District</Text></TabHeading>}>
+                  <View padder>
+                    <View style={{ padding: 20 }}>
+                      <Row>
+                        <Col>
+                          <Text>San Felipe Del Rio</Text>
+                        </Col>
+                        <Col>
+                          <Button onPress={() => { this.props.navigation.navigate("DistrictHomePage"); }}><Text>Go</Text></Button>
+                        </Col>
+                      </Row>
+                    </View>
+                  </View>
+                </Tab>
+                <Tab heading={<TabHeading><Text>Schools</Text></TabHeading>}>
+                  <View padder>
+                    <View style={{ padding: 20 }}>
+                      <Form>
+                        <Item>
+                          <Icon active name="search" />
+                          <Input placeholder="Search By School Names" />
+                        </Item>
+                      </Form>
+                    </View>
+                  </View>
+                </Tab>
+              </Tabs>
+            </View>
+          </View>
         </Content>
       </Container>
     );

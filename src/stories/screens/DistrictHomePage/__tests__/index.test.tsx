@@ -1,12 +1,11 @@
 import React from "react";
-import Login from "../index";
+import DistrictHomePage from "../index";
 // Note: test renderer must be required after react-native.
 import renderer from "react-test-renderer";
 
-const onLogin = jest.fn();
-const loginForm = React.Component;
+const navigation = { state: jest.fn() };
 
 it("renders correctly", () => {
-	const tree = renderer.create(<Login onLogin={onLogin} loginForm={loginForm} />).toJSON();
+	const tree = renderer.create(<DistrictHomePage navigation={navigation} />).toJSON();
 	expect(tree).toMatchSnapshot();
 });

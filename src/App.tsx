@@ -9,7 +9,7 @@ import Login from "./container/LoginContainer";
 import Home from "./container/HomeContainer";
 import BlankPage from "./container/BlankPageContainer";
 import Sidebar from "./container/SidebarContainer";
-
+import DistrictHomePage from "./container/DistrictHomePageContainer";
 const Drawer = DrawerNavigator(
 	{
 		Home: { screen: Home },
@@ -18,19 +18,20 @@ const Drawer = DrawerNavigator(
 		drawerWidth: deviceWidth - 50,
 		drawerPosition: "left",
 		contentComponent: (props: any) => <Sidebar {...props} />,
-	}
+	},
 );
 
 const App = StackNavigator(
 	{
-		Login: { screen: Login },
+		Home: { screen: Home },
+		DistrictHomePage: { screen: DistrictHomePage },
 		BlankPage: { screen: BlankPage },
 		Drawer: { screen: Drawer },
 	},
 	{
-		initialRouteName: "Login",
+		initialRouteName: "Home",
 		headerMode: "none",
-	}
+	},
 );
 
 export default () => (
