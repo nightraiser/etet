@@ -1,7 +1,7 @@
 import * as React from "react";
 import SearchPage from "../../stories/screens/SearchPage";
 import { connect } from "react-redux";
-import { fetchList, } from "./actions";
+import { fetchList } from "./actions";
 export interface Props {
 	navigation: any;
 	list: any;
