@@ -35,7 +35,7 @@ const App = StackNavigator(
 		SearchPage: { screen: SearchPage },
 	},
 	{
-		initialRouteName: "Map",
+		initialRouteName: "Home",
 		headerMode: "none",
 	},
 );

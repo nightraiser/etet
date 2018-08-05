@@ -1,15 +1,20 @@
 import * as React from "react";
 import { Row, Col, Text, Spinner } from "native-base";
 import Icon from "react-native-vector-icons/FontAwesome";
-import { View } from "react-native";
-import styles from "./styles";
+import { View, TouchableHighlight } from "react-native";
+
 export interface Props {
 	navigation: any;
 }
 export interface State {}
 class GridNavigation extends React.Component<Props, State> {
 	render() {
-
+		const styles = {
+			gridIcon: {
+				fontSize: 28,
+				color: "#27ae60",
+			},
+		}
 		return (
 			<View>
 				<Row>
@@ -60,10 +65,12 @@ class GridNavigation extends React.Component<Props, State> {
 						</View>
 					</Col>
 					<Col>
-						<View style={{ alignItems: "center", padding: 5 }}>
-							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="calendar"></Icon>
-							<Text>Calendar</Text>
-						</View>
+						<TouchableHighlight onPress={() => { this.props.navigation.navigate("Calendar")}} >
+							<View style={{ alignItems: "center", padding: 5 }}>
+								<Icon size={styles.gridIcon.fontSize} color={styles.gridIcon.color} name="calendar"></Icon>
+								<Text>Calendar</Text>
+							</View>
+						</TouchableHighlight>
 					</Col>
 					<Col>
 						<View style={{ alignItems: "center", padding: 5 }}>
