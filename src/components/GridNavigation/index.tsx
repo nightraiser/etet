@@ -15,19 +15,19 @@ class GridNavigation extends React.Component<Props, State> {
 				<Row>
 					<Col>
 						<View style={{ alignItems: "center", padding: 5 }}>
-							<Icon style = {styles.gridIcon} name="star"></Icon>
+							<Icon  size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color} name="star"></Icon>
 							<Text>Ratings</Text>
 						</View>
 					</Col>
 					<Col>
 						<View style={{ alignItems: "center", padding: 5 }}>
-							<Icon style = {styles.gridIcon}  name="bar-chart"></Icon>
+							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="bar-chart"></Icon>
 							<Text>KPI</Text>
 						</View>
 					</Col>
 					<Col>
 						<View style={{ alignItems: "center", padding: 5 }}>
-							<Icon style = {styles.gridIcon}  name="university"></Icon>
+							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="university"></Icon>
 							<Text>Schools</Text>
 						</View>
 					</Col>
@@ -35,19 +35,19 @@ class GridNavigation extends React.Component<Props, State> {
 				<Row>
 					<Col>
 						<View style={{ alignItems: "center", padding: 5 }}>
-							<Icon style = {styles.gridIcon}  name="user-circle"></Icon>
+							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="user-circle"></Icon>
 							<Text>Trustee</Text>
 						</View>
 					</Col>
 					<Col>
 						<View style={{ alignItems: "center", padding: 5 }}>
-							<Icon style = {styles.gridIcon}  name="cogs"></Icon>
+							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="cogs"></Icon>
 							<Text>Administrator</Text>
 						</View>
 					</Col>
 					<Col>
 						<View style={{ alignItems: "center", padding: 5 }}>
-							<Icon style = {styles.gridIcon}  name="map"></Icon>
+							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="map"></Icon>
 							<Text>Maps</Text>
 						</View>
 					</Col>
@@ -55,19 +55,19 @@ class GridNavigation extends React.Component<Props, State> {
 				<Row>
 					<Col>
 						<View style={{ alignItems: "center", padding: 5 }}>
-							<Icon style = {styles.gridIcon}  name="rss"></Icon>
+							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="rss"></Icon>
 							<Text>News</Text>
 						</View>
 					</Col>
 					<Col>
 						<View style={{ alignItems: "center", padding: 5 }}>
-							<Icon style = {styles.gridIcon}  name="calendar"></Icon>
+							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="calendar"></Icon>
 							<Text>Calendar</Text>
 						</View>
 					</Col>
 					<Col>
 						<View style={{ alignItems: "center", padding: 5 }}>
-							<Icon style = {styles.gridIcon}  name="phone"></Icon>
+							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="phone"></Icon>
 							<Text>Contact</Text>
 						</View>
 					</Col>
@@ -75,19 +75,19 @@ class GridNavigation extends React.Component<Props, State> {
 				<Row>
 					<Col>
 						<View style={{ alignItems: "center", padding: 5 }}>
-							<Icon style = {styles.gridIcon}  name="user"></Icon>
+							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="user"></Icon>
 							<Text>Student</Text>
 						</View>
 					</Col>
 					<Col>
 						<View style={{ alignItems: "center", padding: 5 }}>
-							<Icon style = {styles.gridIcon}  name="users"></Icon>
+							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="users"></Icon>
 							<Text>Parent</Text>
 						</View>
 					</Col>
 					<Col>
 						<View style={{ alignItems: "center", padding: 5 }}>
-							<Icon style = {styles.gridIcon}  name="home"></Icon>
+							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="home"></Icon>
 							<Text>Employee</Text>
 						</View>
 					</Col>
