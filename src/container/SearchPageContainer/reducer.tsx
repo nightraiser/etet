@@ -11,7 +11,7 @@ export default function(state = initialState, action) {
 		case actionTypes.LIST_IS_LOADING:
 			return{
 				...state,
-				isLoading: action.isLoading,
+				isListLoading: action.isListLoading,
 			};
 		case actionTypes.FETCH_LIST_SUCCESS:
 			return{

@@ -14,7 +14,6 @@ export interface State {}
 class SearchPage extends React.Component<Props, State> {
 	render() {
 		const param = this.props.navigation.state.params;
-
 		let content: any = <Spinner />;
 		if (this.props.isLoading === false) {
 			content = this.props.list.map((item, index) => {
