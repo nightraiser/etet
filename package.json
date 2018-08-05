@@ -24,15 +24,12 @@
   },
   "main": "node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
-    "start":
-      "npm run build && concurrently -r 'npm run watch' 'react-native-scripts start'",
+    "start": "npm run build && concurrently -r 'npm run watch' 'react-native-scripts start'",
     "eject": "react-native-scripts eject",
     "test": "yarn jest && tslint src/**/*.ts && eslint .",
     "watch": "npm run build -- -w",
-    "ios":
-      "npm run build && concurrently -r 'npm run watch' 'react-native-scripts ios'",
-    "android":
-      "npm run build && concurrently -r 'npm run watch' 'react-native-scripts android'",
+    "ios": "npm run build && concurrently -r 'npm run watch' 'react-native-scripts ios'",
+    "android": "npm run build && concurrently -r 'npm run watch' 'react-native-scripts android'",
     "tsc": "tsc",
     "clean": "rimraf artifacts",
     "build": "npm run clean && npm run tsc --",
@@ -41,7 +38,11 @@
   },
   "jest": {
     "preset": "jest-expo",
-    "moduleFileExtensions": ["ts", "tsx", "js"],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
     "transform": {
       "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest",
       "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
@@ -53,10 +54,13 @@
   },
   "dependencies": {
     "expo": "^24.0.0",
+    "exponent": "^14.0.0",
     "lodash": "4.17.4",
     "native-base": "2.3.6",
     "react": "16.2.0",
     "react-native": "0.51.0",
+    "react-native-fa-icons": "^3.0.1",
+    "react-native-vector-icons": "^5.0.0",
     "react-navigation": "1.0.0-beta.21",
     "react-redux": "5.0.6",
     "redux": "3.7.2",
