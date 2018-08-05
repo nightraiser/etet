@@ -55,7 +55,7 @@ class Home extends React.Component<Props, State> {
                     </View>
                   </View>
                 </Tab>
-                <Tab heading={<TabHeading><Text>Schools</Text></TabHeading>}>
+                <Tab heading ={<TabHeading><Text>Schools</Text></TabHeading>}>
                   <View padder>
                     <View style={{ padding: 20 }}>
                       <Form>

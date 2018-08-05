@@ -56,7 +56,7 @@ class 	CalendarPage extends React.Component<Props, State> {
 
 				</Content>
 
-				<FooterNavigation navigation={this.props.navigation} current={ Calendar } />
+				<FooterNavigation navigation={this.props.navigation} current={ "Events" } />
 			</Container>
 		);
 	}
