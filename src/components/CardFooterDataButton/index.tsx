@@ -13,7 +13,7 @@ class CardFooterDataButton extends React.Component<Props, State> {
 
         return (
             <View style={{ flexDirection: 'row', }}>
-                <Icon name={this.props.icon} style={{fontSize: 20,}} />
+                <Icon name={this.props.icon} size={20} />
                 <View style={{marginLeft: 3,}}>
                     <Text style={{ fontSize: 14, }}>{this.props.title}</Text>
                     <Text style={{ fontSize: 14, }}>{this.props.value}</Text>
