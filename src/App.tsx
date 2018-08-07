@@ -10,9 +10,10 @@ import Home from "./container/HomeContainer";
 import BlankPage from "./container/BlankPageContainer";
 import Sidebar from "./container/SidebarContainer";
 import DistrictHomePage from "./container/DistrictHomePageContainer";
+import MapPage from "./container/MapContainer";
+import CalendarPage from "./container/CalendarContainer";
 import SearchPage from "./container/SearchPageContainer";
-import CalendarContainer from "./container/CalendarContainer";
-import MapContainer from "./container/MapContainer";
+import KpiPage from "./container/KpiContainer";
 const Drawer = DrawerNavigator(
 	{
 		Home: { screen: Home },
@@ -26,16 +27,17 @@ const Drawer = DrawerNavigator(
 
 const App = StackNavigator(
 	{
-		Map:{screen:MapContainer},
-		Calendar:{screen:CalendarContainer},
+		Kpi:{screen :KpiPage},
+		Calendar :{screen:CalendarPage},
+		Map :{screen:MapPage},
 		Home: { screen: Home },
 		DistrictHomePage: { screen: DistrictHomePage },
 		BlankPage: { screen: BlankPage },
 		Drawer: { screen: Drawer },
-		SearchPage: { screen: SearchPage },
+		SearchPage:{screen:SearchPage}
 	},
 	{
-		initialRouteName: "Home",
+		initialRouteName: "Kpi",
 		headerMode: "none",
 	},
 );
