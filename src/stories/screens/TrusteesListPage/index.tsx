@@ -12,12 +12,20 @@ export interface Props {
 }
 export interface State {}
 class TrusteesPage extends React.Component<Props, State> {
+	navigateToDetails(item){
+		this.props.navigation.navigate("TrusteeDetails", {trustee: item});
+	}
 	render() {
 		const param = this.props.navigation.state.params;
 
 		let content: any = <Spinner />;
 		if (this.props.isLoading === false) {
 			content = this.props.list.map((item, index) => {
+				let description: string = item.trusteeProfile ? item.trusteeProfile : "";
+				if(description.length > 100) {
+					description = description.substr(0, 100);
+					description += "...";
+				}
 				return (
 					<Card key={index} style={{ flex: 0 }}>
 						<CardItem>
@@ -32,12 +40,18 @@ class TrusteesPage extends React.Component<Props, State> {
 						<CardItem>
 							<Body>
 								<Text>
-									{item.trusteeProfile}
+									{description}
 								</Text>
 							</Body>
 						</CardItem>
-						<CardItem>
-							
+						<CardItem footer>
+							<Body>
+							</Body>
+							<Right>
+								<Button primary onPress= {(e) => {this.navigateToDetails(item)}} >
+									<Text>Read More</Text>
+								</Button>
+							</Right>
 						</CardItem>
 					</Card>
 				);
@@ -51,6 +65,10 @@ class TrusteesPage extends React.Component<Props, State> {
 							<Icon name="ios-arrow-back" />
 						</Button>
 					</Left>
+					<Body style={{ flex: 3 }}>
+						<Title>{"Trustees "}</Title>
+					</Body>
+
 				</Header>
 
 				<Content padder>

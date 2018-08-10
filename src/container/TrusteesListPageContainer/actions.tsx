@@ -1,3 +1,5 @@
+import apiConfigurations from "../../constants/apiConfigurations";
+
 export const actionTypes = {
 	LIST_IS_LOADING: "LIST_IS_LOADING",
 	FETCH_LIST_SUCCESS: "FETCH_LIST_SUCCESS",
@@ -32,7 +34,7 @@ export function updateSearchKey(searchText) {
 export function fetchList(searchKey:string) {
 	return dispatch => {
 		dispatch(listIsLoading(true));
-		fetch("http://ec2-34-209-104-196.us-west-2.compute.amazonaws.com:9090/api/account/GetTrustees/1?trusteeid=ALL" + searchKey)
+		fetch(`${apiConfigurations.baseUrl}/${apiConfigurations.apiPath}/account/GetTrustees/1?trusteeid=ALL&search=${searchKey}`)
 			.then((response) => response.json())
 			.then((responseJson) => {
 				dispatch(fetchListSuccess(responseJson));
