@@ -27,7 +27,7 @@ const Drawer = DrawerNavigator(
 
 const App = StackNavigator(
 	{
-		Kpi:{screen :KpiPage},
+		Kpi :{screen :KpiPage},
 		Calendar :{screen:CalendarPage},
 		Map :{screen:MapPage},
 		Home: { screen: Home },
