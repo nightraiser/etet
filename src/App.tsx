@@ -29,7 +29,7 @@ const Drawer = DrawerNavigator(
 
 const App = StackNavigator(
 	{	
-		DistrictRating: {screen :DistrictRatingPage},
+		RatingPage: {screen :DistrictRatingPage},
 		Kpi: {screen :KpiPage},
 		Calendar :{screen:CalendarPage},
 		Map :{screen:MapPage},
@@ -40,7 +40,7 @@ const App = StackNavigator(
 		SearchPage:{screen:SearchPage}
 	},
 	{
-		initialRouteName: "DistrictRating",
+		initialRouteName: "Home",
 		headerMode: "none",
 	},
 );
