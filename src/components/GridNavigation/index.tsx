@@ -27,10 +27,12 @@ class GridNavigation extends React.Component<Props, State> {
 						</TouchableHighlight>
 					</Col>
 					<Col>
+						<TouchableHighlight onPress={() => { this.props.navigation.navigate("Kpi")}} >
 						<View style={{ alignItems: "center", padding: 5 }}>
 							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="bar-chart"></Icon>
 							<Text>KPI</Text>
 						</View>
+						</TouchableHighlight>
 					</Col>
 					<Col>
 						<View style={{ alignItems: "center", padding: 5 }}>

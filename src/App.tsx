@@ -32,7 +32,7 @@ const Drawer = DrawerNavigator(
 );
 
 const App = StackNavigator(
-	{	
+	{
 		RatingPage: {screen :DistrictRatingPage},
 		Kpi: {screen :KpiPage},
 		Calendar :{screen:CalendarPage},
