@@ -15,7 +15,7 @@ interface State {
 class AutoCompleteInput extends Component<Props, State> {
     constructor(props) {
         super(props);
-        this.state = {data: [], showList: false, isLoading: true};
+        this.state = {data: new Array(), fullData: new Array(), showList: false, isLoading: true};
     }
     componentWillMount(){
         fetch(`${this.props.url}`)
