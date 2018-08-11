@@ -19,7 +19,8 @@ import {
   Row,
   Col,
 } from "native-base";
-
+import AutoCompleteInput from "../../../components/AutoCompleteInput";
+import apiConfigurations from "../../../constants/apiConfigurations";
 import styles from "./styles";
 export interface Props {
   navigation: any;
@@ -29,6 +30,12 @@ export interface State {}
 const logo = require("../../../../assets/logo.png");
 class Home extends React.Component<Props, State> {
   render() {
+    const searchUrl = `${apiConfigurations.baseUrl}/${apiConfigurations.apiPath}/school/getschools/1?schoolNumber=ALL&schoolName=`;
+    const districtSchoolData = {
+      sname:'SAN FELIPE DEL RIO CISD',
+      // tslint:disable-next-line:max-line-length
+      imagepath: "https://scontent.fhyd2-1.fna.fbcdn.net/v/t1.0-9/11206113_781390008645817_5282013438360223026_n.png?_nc_cat=0&oh=62ddee5f2d8e38f4093d0b03b8a4b21a&oe=5C022F8C",
+    }
     return (
       <Container>
         <Content style={{ backgroundColor: "#fff" }}>
@@ -49,7 +56,9 @@ class Home extends React.Component<Props, State> {
                           <Text>San Felipe Del Rio</Text>
                         </Col>
                         <Col>
-                          <Button onPress={() => { this.props.navigation.navigate("DistrictHomePage"); }}><Text>Go</Text></Button>
+                          <Button onPress={() => { this.props.navigation.navigate("DistrictHomePage", {data: districtSchoolData}); }}>
+                          <Text>Go</Text>
+                          </Button>
                         </Col>
                       </Row>
                     </View>
@@ -58,12 +67,10 @@ class Home extends React.Component<Props, State> {
                 <Tab heading ={<TabHeading><Text>Schools</Text></TabHeading>}>
                   <View padder>
                     <View style={{ padding: 20 }}>
-                      <Form>
-                        <Item>
-                          <Icon active name="search" />
-                          <Input placeholder="Search By School Names" />
-                        </Item>
-                      </Form>
+                      <AutoCompleteInput 
+                      placeholder="Search for School Names"
+                      url={searchUrl}
+                      onSelect={(school) => this.props.navigation.navigate("DistrictHomePage", { data: school })}/>
                     </View>
                   </View>
                 </Tab>
