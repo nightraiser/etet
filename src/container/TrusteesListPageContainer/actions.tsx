@@ -34,7 +34,7 @@ export function updateSearchKey(searchText) {
 export function fetchList(searchKey:string) {
 	return dispatch => {
 		dispatch(listIsLoading(true));
-		fetch(`${apiConfigurations.baseUrl}/${apiConfigurations.apiPath}/school/getschools/1?schoolNumber=ALL&schoolName=${searchKey}`)
+		fetch(`${apiConfigurations.baseUrl}/${apiConfigurations.apiPath}/account/GetTrustees/1?trusteeid=ALL&search=${searchKey}`)
 			.then((response) => response.json())
 			.then((responseJson) => {
 				dispatch(fetchListSuccess(responseJson));
