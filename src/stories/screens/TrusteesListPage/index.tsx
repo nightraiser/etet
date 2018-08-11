@@ -4,6 +4,7 @@ import { Container, Header, View, Title, Content, Text, Button, Icon, Left, Righ
 import FooterNavigation from "../../../components/FooterNavigation";
 import CardFooterDataButton from "../../../components/CardFooterDataButton";
 import styles from "./styles";
+import { TouchableHighlight } from "react-native";
 export interface Props {
 	navigation: any;
 	isLoading: boolean;
@@ -12,9 +13,6 @@ export interface Props {
 }
 export interface State {}
 class TrusteesPage extends React.Component<Props, State> {
-	navigateToDetails(item){
-		this.props.navigation.navigate("TrusteeDetails", {trustee: item});
-	}
 	render() {
 		const param = this.props.navigation.state.params;
 
@@ -48,7 +46,7 @@ class TrusteesPage extends React.Component<Props, State> {
 							<Body>
 							</Body>
 							<Right>
-								<Button primary onPress= {(e) => {this.navigateToDetails(item)}} >
+								<Button primary onPress={() => this.props.navigation.navigate("TrusteeDetails", { trustee: item })} >
 									<Text>Read More</Text>
 								</Button>
 							</Right>
