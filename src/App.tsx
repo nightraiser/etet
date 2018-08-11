@@ -14,6 +14,8 @@ import MapPage from "./container/MapContainer";
 import CalendarPage from "./container/CalendarContainer";
 import SearchPage from "./container/SearchPageContainer";
 import KpiPage from "./container/KpiContainer";
+import DistrictRatingPage from "./container/DistrictRatingPageContainer";
+
 const Drawer = DrawerNavigator(
 	{
 		Home: { screen: Home },
@@ -26,8 +28,9 @@ const Drawer = DrawerNavigator(
 );
 
 const App = StackNavigator(
-	{
-		Kpi:{screen :KpiPage},
+	{	
+		DistrictRating: {screen :DistrictRatingPage},
+		Kpi: {screen :KpiPage},
 		Calendar :{screen:CalendarPage},
 		Map :{screen:MapPage},
 		Home: { screen: Home },
@@ -37,7 +40,7 @@ const App = StackNavigator(
 		SearchPage:{screen:SearchPage}
 	},
 	{
-		initialRouteName: "Kpi",
+		initialRouteName: "DistrictRating",
 		headerMode: "none",
 	},
 );
