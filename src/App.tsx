@@ -16,6 +16,10 @@ import SearchPage from "./container/SearchPageContainer";
 import KpiPage from "./container/KpiContainer";
 import DistrictRatingPage from "./container/DistrictRatingPageContainer";
 
+import CalendarContainer from "./container/CalendarContainer";
+import MapContainer from "./container/MapContainer";
+import TrusteesListPageContaier from "./container/TrusteesListPageContainer";
+import TrusteeDetailsPageContainer from "./container/TrusteeDetailsPageContainer";
 const Drawer = DrawerNavigator(
 	{
 		Home: { screen: Home },
@@ -37,7 +41,9 @@ const App = StackNavigator(
 		DistrictHomePage: { screen: DistrictHomePage },
 		BlankPage: { screen: BlankPage },
 		Drawer: { screen: Drawer },
-		SearchPage:{screen:SearchPage}
+		SearchPage:{screen:SearchPage},
+		TrusteesListPage: { screen: TrusteesListPageContaier },
+		TrusteeDetails: { screen: TrusteeDetailsPageContainer },
 	},
 	{
 		initialRouteName: "Home",
