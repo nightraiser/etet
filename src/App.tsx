@@ -37,7 +37,7 @@ const App = StackNavigator(
 		SearchPage:{screen:SearchPage}
 	},
 	{
-		initialRouteName: "Kpi",
+		initialRouteName: "Home",
 		headerMode: "none",
 	},
 );
