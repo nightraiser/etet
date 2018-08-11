@@ -12,7 +12,7 @@ class KpiPage extends React.Component<Props, State> {
 	render() {
 		const param = this.props.navigation.state.params;
 		const chart_wh = 200
-    	const series = [40, 60, 80, 120, 150]
+    	const series = [40, 6, 80, 120, 150]
 		const sliceColor = ['#b71540','#e84118','#fbc531', '#44bd32', '#cd6133']
 		/*const data = [
 		{ name: 'Graduate', population: 40 },
