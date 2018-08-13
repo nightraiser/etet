@@ -20,6 +20,8 @@ import CalendarContainer from "./container/CalendarContainer";
 import MapContainer from "./container/MapContainer";
 import TrusteesListPageContaier from "./container/TrusteesListPageContainer";
 import TrusteeDetailsPageContainer from "./container/TrusteeDetailsPageContainer";
+import MembershipCardPageContainer from "./container/MembershipCardPageContainer";
+import ContactPageContainer from "./container/ContactPageContainer";
 const Drawer = DrawerNavigator(
 	{
 		Home: { screen: Home },
@@ -33,17 +35,19 @@ const Drawer = DrawerNavigator(
 
 const App = StackNavigator(
 	{
-		RatingPage: {screen :DistrictRatingPage},
-		Kpi: {screen :KpiPage},
-		Calendar :{screen:CalendarPage},
-		Map :{screen:MapPage},
+		RatingPage: {screen : DistrictRatingPage},
+		Kpi: {screen : KpiPage},
+		Calendar : {screen: CalendarPage},
+		Map : {screen: MapPage},
 		Home: { screen: Home },
 		DistrictHomePage: { screen: DistrictHomePage },
 		BlankPage: { screen: BlankPage },
 		Drawer: { screen: Drawer },
-		SearchPage:{screen:SearchPage},
+		SearchPage: {screen: SearchPage},
 		TrusteesListPage: { screen: TrusteesListPageContaier },
 		TrusteeDetails: { screen: TrusteeDetailsPageContainer },
+		MembershipCardPage: { screen: MembershipCardPageContainer},
+		ContactPage: { screen: ContactPageContainer},
 	},
 	{
 		initialRouteName: "Home",
