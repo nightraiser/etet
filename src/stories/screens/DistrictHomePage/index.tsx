@@ -41,7 +41,7 @@ class DistrictHomePage extends React.Component<Props, State> {
 								<TouchableOpacity style={{padding: 5}}>
 									<FaIcon size={30} name="home"/>
 								</TouchableOpacity>
-								<TouchableOpacity style={{ padding: 5 }}>
+								<TouchableOpacity style={{ padding: 5 }} onPress={() => this.props.navigation.navigate("MembershipCardPage", {data})}>
 									<FaIcon size={30} name="address-card" />
 								</TouchableOpacity>
 								<TouchableOpacity style={{ padding: 5 }}>

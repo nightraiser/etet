@@ -74,7 +74,7 @@ class SearchPage extends React.Component<Props, State> {
 					{content}
 				</Content>
 
-				<FooterNavigation navigation={this.props.navigation} current={param.name} />
+				<FooterNavigation navigation={this.props.navigation} current={"SearchPage"} />
 			</Container>
 		);
 	}
