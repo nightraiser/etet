@@ -66,10 +66,12 @@ class GridNavigation extends React.Component<Props, State> {
 				</Row>
 				<Row>
 					<Col>
+					<TouchableHighlight onPress={() => { this.props.navigation.navigate("NewsPage")}} >
 						<View style={{ alignItems: "center", padding: 5 }}>
 							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="rss"></Icon>
 							<Text>News</Text>
 						</View>
+						</TouchableHighlight>
 					</Col>
 					<Col>
 						<TouchableHighlight onPress={() => { this.props.navigation.navigate("Calendar")}} >

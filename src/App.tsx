@@ -22,6 +22,7 @@ import TrusteesListPageContaier from "./container/TrusteesListPageContainer";
 import TrusteeDetailsPageContainer from "./container/TrusteeDetailsPageContainer";
 import MembershipCardPageContainer from "./container/MembershipCardPageContainer";
 import ContactPageContainer from "./container/ContactPageContainer";
+import NewsPage from "./container/NewsPageContainer";
 const Drawer = DrawerNavigator(
 	{
 		Home: { screen: Home },
@@ -35,6 +36,7 @@ const Drawer = DrawerNavigator(
 
 const App = StackNavigator(
 	{
+		NewsPage :{screen :NewsPage},
 		RatingPage: {screen : DistrictRatingPage},
 		Kpi: {screen : KpiPage},
 		Calendar : {screen: CalendarPage},
