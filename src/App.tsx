@@ -36,12 +36,12 @@ const Drawer = DrawerNavigator(
 
 const App = StackNavigator(
 	{
-		BullyingPage :{screen: BullyingReportContainer},
-		RatingPage: {screen :DistrictRatingPage},
-		Kpi: {screen :KpiPage},
-		Calendar :{screen:CalendarPage},
-		Map :{screen:MapPage},
-		NewsPage :{screen :NewsPage},
+		BullyingPage : {screen: BullyingReportContainer},
+		RatingPage: {screen : DistrictRatingPage},
+		Kpi: {screen : KpiPage},
+		Calendar : {screen: CalendarPage},
+		Map : {screen: MapPage},
+		NewsPage : {screen : NewsPage},
 		Home: { screen: Home },
 		DistrictHomePage: { screen: DistrictHomePage },
 		BlankPage: { screen: BlankPage },
