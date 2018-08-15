@@ -1,6 +1,5 @@
 import * as React from "react";
 import MapPage from "../../stories/screens/MapPage";
-import MapView from 'react-native-maps';
 
 export interface Props {
 	navigation: any,

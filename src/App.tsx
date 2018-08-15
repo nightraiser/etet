@@ -23,6 +23,7 @@ import BullyingReportContainer from "./container/BullyingReportContainer";
 import MembershipCardPageContainer from "./container/MembershipCardPageContainer";
 import ContactPageContainer from "./container/ContactPageContainer";
 import NewsPage from "./container/NewsPageContainer";
+import TrasnportContainer from "./container/TransportContainer";
 const Drawer = DrawerNavigator(
 	{
 		Home: { screen: Home },
@@ -51,6 +52,7 @@ const App = StackNavigator(
 		TrusteeDetails: { screen: TrusteeDetailsPageContainer },
 		MembershipCardPage: { screen: MembershipCardPageContainer},
 		ContactPage: { screen: ContactPageContainer},
+		TrasnportPage: { screen: TrasnportContainer},
 	},
 	{
 		initialRouteName: "Home",

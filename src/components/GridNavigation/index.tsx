@@ -54,7 +54,7 @@ class GridNavigation extends React.Component<Props, State> {
 					<Col>
 						<View style={{ alignItems: "center", padding: 5 }}>
 							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="cogs"></Icon>
-							<Text>Administrator</Text>
+							<Text>Admin</Text>
 						</View>
 					</Col>
 					<Col>
@@ -109,6 +109,18 @@ class GridNavigation extends React.Component<Props, State> {
 							<Text>Employee</Text>
 						</View>
 					</Col>
+				</Row>
+				<Row>
+					<Col>
+						<TouchableHighlight onPress={() => { this.props.navigation.navigate("TrasnportPage", { ...param }) }} >
+						<View style={{ alignItems: "center", padding: 5 }}>
+							<Icon size={styles.gridIcon.fontSize} color={styles.gridIcon.color} name="bus"></Icon>
+							<Text>Transport</Text>
+						</View>
+						</TouchableHighlight>
+					</Col>
+					<Col></Col>
+					<Col></Col>
 				</Row>
 			</View>
 		);
