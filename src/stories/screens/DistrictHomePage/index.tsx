@@ -38,8 +38,8 @@ class DistrictHomePage extends React.Component<Props, State> {
 						</View>
 						<View style={{flex:3, alignItems:"flex-end"}}>
 							<View style={{flexDirection: "row"}}>
-								<TouchableOpacity style={{padding: 5}}>
-									<FaIcon size={30} name="home"/>
+								<TouchableOpacity style={{ padding: 5 }} onPress={() => this.props.navigation.navigate("BullyingPage")}>
+									<FaIcon size={30} name="frown-o"/>
 								</TouchableOpacity>
 								<TouchableOpacity style={{ padding: 5 }} onPress={() => this.props.navigation.navigate("MembershipCardPage", {data})}>
 									<FaIcon size={30} name="address-card" />
