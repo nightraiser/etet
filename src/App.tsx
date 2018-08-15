@@ -15,12 +15,14 @@ import CalendarPage from "./container/CalendarContainer";
 import SearchPage from "./container/SearchPageContainer";
 import KpiPage from "./container/KpiContainer";
 import DistrictRatingPage from "./container/DistrictRatingPageContainer";
-
 import CalendarContainer from "./container/CalendarContainer";
 import MapContainer from "./container/MapContainer";
 import TrusteesListPageContaier from "./container/TrusteesListPageContainer";
 import TrusteeDetailsPageContainer from "./container/TrusteeDetailsPageContainer";
 import BullyingReportContainer from "./container/BullyingReportContainer"; 
+import MembershipCardPageContainer from "./container/MembershipCardPageContainer";
+import ContactPageContainer from "./container/ContactPageContainer";
+import NewsPage from "./container/NewsPageContainer";
 const Drawer = DrawerNavigator(
 	{
 		Home: { screen: Home },
@@ -39,16 +41,19 @@ const App = StackNavigator(
 		Kpi: {screen :KpiPage},
 		Calendar :{screen:CalendarPage},
 		Map :{screen:MapPage},
+		NewsPage :{screen :NewsPage},
 		Home: { screen: Home },
 		DistrictHomePage: { screen: DistrictHomePage },
 		BlankPage: { screen: BlankPage },
 		Drawer: { screen: Drawer },
-		SearchPage:{screen:SearchPage},
+		SearchPage: {screen: SearchPage},
 		TrusteesListPage: { screen: TrusteesListPageContaier },
 		TrusteeDetails: { screen: TrusteeDetailsPageContainer },
+		MembershipCardPage: { screen: MembershipCardPageContainer},
+		ContactPage: { screen: ContactPageContainer},
 	},
 	{
-		initialRouteName: "BullyingPage",
+		initialRouteName: "Home",
 		headerMode: "none",
 	},
 );

@@ -14,7 +14,8 @@ class GridNavigation extends React.Component<Props, State> {
 				fontSize: 28,
 				color: "#27ae60",
 			},
-		}
+		};
+		const param = this.props.navigation.state.params;
 		return (
 			<View>
 				<Row>
@@ -65,10 +66,12 @@ class GridNavigation extends React.Component<Props, State> {
 				</Row>
 				<Row>
 					<Col>
+					<TouchableHighlight onPress={() => { this.props.navigation.navigate("NewsPage")}} >
 						<View style={{ alignItems: "center", padding: 5 }}>
 							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="rss"></Icon>
 							<Text>News</Text>
 						</View>
+						</TouchableHighlight>
 					</Col>
 					<Col>
 						<TouchableHighlight onPress={() => { this.props.navigation.navigate("Calendar")}} >
@@ -79,10 +82,12 @@ class GridNavigation extends React.Component<Props, State> {
 						</TouchableHighlight>
 					</Col>
 					<Col>
-						<View style={{ alignItems: "center", padding: 5 }}>
+						<TouchableHighlight onPress={() => { this.props.navigation.navigate("ContactPage", {...param})}} >
+							<View style={{ alignItems: "center", padding: 5 }}>
 							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="phone"></Icon>
 							<Text>Contact</Text>
-						</View>
+							</View>
+						</TouchableHighlight>
 					</Col>
 				</Row>
 				<Row>

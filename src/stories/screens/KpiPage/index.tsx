@@ -101,9 +101,8 @@ class KpiPage extends React.Component<Props, State> {
 			   </View>
      			 </ScrollView>
 				</Content>
-				<FooterNavigation navigation={this.props.navigation} current={ "KpiPage" } />
 			</Container>
 		);
 	}
 }
-export default KpiPage; 	
+export default KpiPage;

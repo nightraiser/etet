@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Item, Input, Icon, Form, Toast } from "native-base";
 import { Field, reduxForm } from "redux-form";
-import Login from "../../stories/screens/Login";
+import BullyingReport from "../../stories/screens/BullyingReport";
 
 const required = value => (value ? undefined : "Required");
 const maxLength = max => value => (value && value.length > max ? `Must be ${max} characters or less` : undefined);
@@ -17,7 +17,7 @@ export interface Props {
 	valid: boolean;
 }
 export interface State {}
-class BullyingReportForm extends React.Component<Props, State> {
+class BullyingReportContainer extends React.Component<Props, State> {
 	textInput: any;
 
 	renderInput({ input, meta: { touched, error } }) {
@@ -34,7 +34,8 @@ class BullyingReportForm extends React.Component<Props, State> {
 		);
 	}
 
-	login() {
+	postBullying() {
+		alert("dd");
 		if (this.props.valid) {
 			this.props.navigation.navigate("Drawer");
 		} else {
@@ -58,10 +59,7 @@ class BullyingReportForm extends React.Component<Props, State> {
 				/>
 			</Form>
 		);
-		return <Login navigation = {this.props.navigation} loginForm={form} onLogin={() => this.login()} />;
+		return <BullyingReport navigation = {this.props.navigation} />;
 	}
 }
-const BullyingReportContainer = reduxForm({
-	form: "login",
-})(BullyingReportForm);
 export default BullyingReportContainer;

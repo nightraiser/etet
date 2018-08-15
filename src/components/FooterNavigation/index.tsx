@@ -19,7 +19,7 @@ class FooterNavigation extends React.Component<Props, State> {
                     </Button>
                     <Button
                         active={(this.props.current === "Events") ? true : false}
-                     vertical onPress={() => this.props.navigation.navigate("BlankPage", { name: "Events", ...param })}>
+                     vertical onPress={() => this.props.navigation.navigate("Calendar", { name: "Events", ...param })}>
                         <Icon active={(this.props.current === "Events") ? true : false} name="calendar" />
                         <Text>Events</Text>
                     </Button>
@@ -27,12 +27,6 @@ class FooterNavigation extends React.Component<Props, State> {
                         vertical onPress={() => this.props.navigation.navigate("SearchPage", { name: "SearchPage", ...param })}>
                         <Icon active={(this.props.current === "SearchPage") ? true : false} name="search" />
                         <Text>Search</Text>
-                    </Button>
-                    <Button 
-                        active={(this.props.current === "More") ? true : false}
-                    vertical onPress={() => this.props.navigation.navigate("BlankPage", { name: "More", ...param })}>
-                        <Icon active={(this.props.current === "More") ? true : false} name="person" />
-                        <Text>More</Text>
                     </Button>
                 </FooterTab>
             </Footer>
