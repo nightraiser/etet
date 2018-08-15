@@ -3,7 +3,7 @@ import { Container, Header, Title, Content, Text, Button, Icon, Left, Right, Bod
 //import FooterNavigation from "../../../components/FooterNavigation";
 import styles from "./styles";
 
-import MapView from 'react-native-maps';
+// import MapView from 'expo';
 
 export interface Props {
 	navigation: any;
