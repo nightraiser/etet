@@ -19,7 +19,7 @@ import CalendarContainer from "./container/CalendarContainer";
 import MapContainer from "./container/MapContainer";
 import TrusteesListPageContaier from "./container/TrusteesListPageContainer";
 import TrusteeDetailsPageContainer from "./container/TrusteeDetailsPageContainer";
-import BullyingReportContainer from "./container/BullyingReportContainer"; 
+import BullyingReportContainer from "./container/BullyingReportContainer";
 import MembershipCardPageContainer from "./container/MembershipCardPageContainer";
 import ContactPageContainer from "./container/ContactPageContainer";
 import NewsPage from "./container/NewsPageContainer";

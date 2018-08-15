@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Image } from "react-native";
 import { Container, Header, Title, Content, Text, Button, Icon, Left, Right, Body, View } from "native-base";
-import MapView from "react-native-maps";
+import MapView, {Marker} from "react-native-maps";
 import styles from "./styles";
 export interface Props {
 	navigation: any;
@@ -41,7 +41,7 @@ class TransportPage extends React.Component<Props, State> {
 			index: 0,
 			imagesList: [bus1, bus2, bus3, bus4, bus5, bus6, bus6, bus7, bus8, bus9, bus10],
 			coordinatesList:
-				[{ latitude: 37.78825, longitude: -122.4324 }, { latitude: 37.78825, longitude: -122.4324 }, { latitude: 37.78825, longitude: -122.4324 }]
+				[{ latitude: 37.78825, longitude: -122.4324 }, { latitude: 37.78825, longitude: -122.4324 }, { latitude: 37.78825, longitude: -122.4324 }],
 		};
 	}
 	componentDidMount() {
@@ -80,10 +80,10 @@ class TransportPage extends React.Component<Props, State> {
 		let velocity = [0.001, 0.001, 0.0001];
 		for (let i = 0; i < currentCoordinates.length; i++) {
 			let currentVelocity = velocity[i % 3];
-			if (i % 2 == 0) {
-				//add
-				newCoordinatesList[i] =
-				{ latitude: currentCoordinates[i].latitude + currentVelocity, longitude: currentCoordinates[i].longitude + currentVelocity };
+			if (i % 2 === 0) {
+				// add
+				newCoordinatesList[i] = {
+					latitude: currentCoordinates[i].latitude + currentVelocity, longitude: currentCoordinates[i].longitude + currentVelocity };
 			} else {
 				// subtract
 				newCoordinatesList[i] = {
@@ -97,10 +97,10 @@ class TransportPage extends React.Component<Props, State> {
 		let map = <Text>Fetching your location</Text>;
 		if (this.state.isLoading === false) {
 
-			let buses = this.state.coordinatesList.map((current, index) => {
+			let buses = this.state.coordinatesList.map((current: any, index) => {
 
 				let image = this.state.imagesList[index];
-				return <MapView.Marker key={index} image={image} coordinate={current} title="Bus" />
+				return <Marker key={index} image={image} coordinate={current} title="Bus" />
 			});
 			map = <MapView style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }}
 				initialRegion={{
