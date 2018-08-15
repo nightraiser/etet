@@ -20,6 +20,7 @@ import CalendarContainer from "./container/CalendarContainer";
 import MapContainer from "./container/MapContainer";
 import TrusteesListPageContaier from "./container/TrusteesListPageContainer";
 import TrusteeDetailsPageContainer from "./container/TrusteeDetailsPageContainer";
+import BullyingReportContainer from "./container/BullyingReportContainer"; 
 const Drawer = DrawerNavigator(
 	{
 		Home: { screen: Home },
@@ -33,6 +34,7 @@ const Drawer = DrawerNavigator(
 
 const App = StackNavigator(
 	{
+		BullyingPage :{screen: BullyingReportContainer},
 		RatingPage: {screen :DistrictRatingPage},
 		Kpi: {screen :KpiPage},
 		Calendar :{screen:CalendarPage},
@@ -46,7 +48,7 @@ const App = StackNavigator(
 		TrusteeDetails: { screen: TrusteeDetailsPageContainer },
 	},
 	{
-		initialRouteName: "Home",
+		initialRouteName: "BullyingPage",
 		headerMode: "none",
 	},
 );
