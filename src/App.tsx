@@ -56,7 +56,7 @@ const App = StackNavigator(
 		TrasnportPage: { screen: TrasnportContainer},
 	},
 	{
-		initialRouteName: "GMaps",
+		initialRouteName: "Home",
 		headerMode: "none",
 	},
 );
