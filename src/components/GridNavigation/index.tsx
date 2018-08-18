@@ -58,10 +58,12 @@ class GridNavigation extends React.Component<Props, State> {
 						</View>
 					</Col>
 					<Col>
-						<View style={{ alignItems: "center", padding: 5 }}>
+						<TouchableHighlight onPress={() => { this.props.navigation.navigate("GMaps")}} >
+							<View style={{ alignItems: "center", padding: 5 }}>
 							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="map"></Icon>
 							<Text>Maps</Text>
 						</View>
+					</TouchableHighlight>
 					</Col>
 				</Row>
 				<Row>
