@@ -74,8 +74,8 @@ class GMapsPage extends React.Component<Props, State> {
 				initialRegion={{
 					latitude: this.state.coordinates.latitude,
 					longitude: this.state.coordinates.longitude,
-					latitudeDelta: 0.1,
-					longitudeDelta: 0.1,
+					latitudeDelta: 10,
+					longitudeDelta: 10,
 				}}>
 				{marker}
 			</MapView>;
