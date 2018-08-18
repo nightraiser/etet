@@ -14,16 +14,17 @@ export interface State {
 	imgurl: string;
 	map: any;
 	index: number;
-	imagesList: any;
+	//imagesList: any;
 	coordinatesList: any;
 }
+/*
 const marker1 = require("../../../../assets/BusIcons/P.png");
 const marker2 = require("../../../../assets/BusIcons/P.png");
 const marker3 = require("../../../../assets/BusIcons/P.png");
 const marker4 = require("../../../../assets/BusIcons/P.png");
 const marker5 = require("../../../../assets/BusIcons/P.png");
 const marker6 = require("../../../../assets/BusIcons/P.png");
-const marker7 = require("../../../../assets/BusIcons/P.png");
+const marker7 = require("../../../../assets/BusIcons/P.png");*/
 let interVal = undefined;
 class GMapsPage extends React.Component<Props, State> {
 	constructor(props) {
@@ -36,7 +37,7 @@ class GMapsPage extends React.Component<Props, State> {
 			imgurl: "",
 			map: MapView,
 			index: 0,
-			imagesList: [marker1, marker2, marker3, marker4, marker5, marker6, marker7],
+			//imagesList: [marker1, marker2, marker3, marker4, marker5, marker6, marker7],
 			coordinatesList:
 				[{ latitude: 37.78825, longitude: -122.4324 }, { latitude: 37.78825, longitude: -122.4324 }, { latitude: 37.78825, longitude: -122.4324 }],
 		};
@@ -49,13 +50,14 @@ class GMapsPage extends React.Component<Props, State> {
 		temp.longitude = -100.895867;
 
 		currentState.coordinates = temp;
-		currentState.coordinatesList = [{ latitude: 29.355100, longitude: -100.914728 },
-		{ latitude: 29.615028, longitude: -101.155243 },
-		{ latitude: 29.312297, longitude: -103.016052 },
-		{ latitude: 29.222673, longitude: -99.781952 },
-		{ latitude: 28.898565, longitude: -100.636139 },
-		{ latitude: 29.472182, longitude: -98.629761  },
-		{ latitude: 28.066224, longitude: -102.321167 }];
+		currentState.coordinatesList = [{ latitude: 29.383694, longitude: -100.917048 },
+		{ latitude: 29.384577, longitude: -100.916402 },
+		{ latitude: 29.357775, longitude: -100.902462 },
+		{ latitude: 29.383694, longitude: -100.917048 },
+		{ latitude:29.375327103000075, longitude: -100.876752263999947 },
+		{ latitude: 29.360457, longitude: -100.901831 },
+		{ latitude: 29.381204, longitude: -100.910964 },
+	];
 		currentState.isLoading = false;
 
 		this.setState(currentState);
@@ -67,8 +69,8 @@ class GMapsPage extends React.Component<Props, State> {
 
 			let marker = this.state.coordinatesList.map((current: any, index) => {
 
-				let image = this.state.imagesList[index];
-				return <Marker key={index} image={image} coordinate={current} title="Marker" />
+			//	let image = this.state.imagesList[index];
+				return <Marker key={index}  coordinate={current} title="Marker" />
 			});
 			map = <MapView style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }}
 				initialRegion={{
