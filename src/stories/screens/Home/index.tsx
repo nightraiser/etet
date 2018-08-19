@@ -52,11 +52,10 @@ class Home extends React.Component<Props, State> {
                   <View padder>
                     <View style={{ padding: 20 }}>
                       <Row>
+                       
+
                         <Col>
-                          <Text>San Felipe Del Rio</Text>
-                        </Col>
-                        <Col>
-                          <Button onPress={() => { this.props.navigation.navigate("DistrictHomePage", {data: districtSchoolData}); }}>
+                          <Button block onPress={() => { this.props.navigation.navigate("DistrictHomePage", {data: districtSchoolData}); }}>
                           <Text>Go</Text>
                           </Button>
                         </Col>
