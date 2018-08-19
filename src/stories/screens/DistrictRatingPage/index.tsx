@@ -68,27 +68,23 @@ class DistrictRatingPage extends React.Component<Props, State> {
                 <Text>
                   Del Rio FreshMan School 
                 </Text>
-				<Text>Early College High School </Text>
+								<Text>Early College High School </Text>
               </Body>
             </CardItem>
 			</Card>
-
-				<Card>
-			 <CardItem header>
-              <Text>NOT RATED(3)</Text>
-            </CardItem>
-            <CardItem>
-			
-              <Body>
-                <Text>
-                  San Felipe Memorial Middle School
-                </Text>
-				<Text>Laughlin Elementary Magnet  </Text>
-				<Text>Student Guidance and Learning Center (SGLC) </Text>
-              </Body>
-            </CardItem>
+			<Card>
+				<CardItem header>
+          <Text>NOT RATED(2)</Text>
+      	</CardItem>
+        <CardItem>
+					<Body>
+						<Text>
+							San Felipe Memorial Middle School
+						</Text>
+					<Text>Laughlin Elementary Magnet</Text>
+					</Body>
+        </CardItem>
 			</Card>
-
 				<Card>
 			 <CardItem header>
               <Text>EXPLEMNTARY (2)</Text>
@@ -106,24 +102,16 @@ class DistrictRatingPage extends React.Component<Props, State> {
 
 			<Card>
 			 <CardItem header>
-              <Text>MET STANDARDS(4)</Text>
-            </CardItem>
-            <CardItem>
-			
-              <Body>
-			  <Text>Buena Vista Elementary</Text>
-			  <Text>Dr.Lonnie Green Elementary </Text>
-		
-                <Text>
-                  Del Rio FreshMan School 
-                </Text>
-				<Text>Blended Academy  </Text>
-              </Body>
-            </CardItem>
-			</Card>
-
-				
-				</Content>
+              <Text>MET STANDARDS(2)</Text>
+       </CardItem>
+       <CardItem>
+        <Body>
+					<Text>Buena Vista Elementary</Text>
+					<Text>Dr.Lonnie Green Elementary </Text>
+        </Body>
+        </CardItem>
+			</Card>		
+		</Content>
 
 				
 			</Container>

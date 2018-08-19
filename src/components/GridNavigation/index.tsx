@@ -36,10 +36,12 @@ class GridNavigation extends React.Component<Props, State> {
 						</TouchableHighlight>
 					</Col>
 					<Col>
+					<TouchableHighlight onPress={() => this.props.navigation.navigate("SearchPage", { name: "SearchPage", ...param })}>
 						<View style={{ alignItems: "center", padding: 5 }}>
 							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="university"></Icon>
 							<Text>Schools</Text>
 						</View>
+						</TouchableHighlight>
 					</Col>
 				</Row>
 				<Row>
@@ -117,7 +119,7 @@ class GridNavigation extends React.Component<Props, State> {
 						<TouchableHighlight onPress={() => { this.props.navigation.navigate("TrasnportPage", { ...param }) }} >
 						<View style={{ alignItems: "center", padding: 5 }}>
 							<Icon size={styles.gridIcon.fontSize} color={styles.gridIcon.color} name="bus"></Icon>
-							<Text>Transport</Text>
+							<Text>Bus Tracking</Text>
 						</View>
 						</TouchableHighlight>
 					</Col>
