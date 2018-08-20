@@ -5,12 +5,20 @@ import {default as FaIcon} from "react-native-vector-icons/FontAwesome";
 import GridNavigation from "../../../components/GridNavigation";
 import FooterNavigation from "../../../components/FooterNavigation";
 import styles from "./styles";
-import { TouchableOpacity } from "react-native";
+import { TouchableOpacity, TouchableHighlight } from "react-native";
 export interface Props {
 	navigation: any;
 }
 export interface State {}
 class DistrictHomePage extends React.Component<Props, State> {
+	goToAppDetailsPage = () =>{
+		const param = this.props.navigation.state.params;
+		const { data } = param;
+		if (data.schoolid === undefined){
+			// SDFR DETAILS
+			this.props.navigation.navigate("SfdrDetailsPage")
+		}
+	}
 	render() {
 		const param = this.props.navigation.state.params;
 		const { data } = param;
@@ -34,7 +42,9 @@ class DistrictHomePage extends React.Component<Props, State> {
 					<View
 					style={{flexDirection: "row",flex:1,marginBottom:10,marginTop:10,paddingBottom:10, borderBottomColor:'#ccc',borderBottomWidth:1}}>
 						<View style={{flex:1}}>
-							<Thumbnail source={{ uri: data.imagepath}} />
+							<TouchableHighlight onPress={() => this.goToAppDetailsPage()}>
+								<Thumbnail source={{ uri: data.imagepath }} />
+							</TouchableHighlight>
 						</View>
 						<View style={{flex:3, alignItems:"flex-end"}}>
 							<View style={{flexDirection: "row"}}>

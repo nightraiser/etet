@@ -1,5 +1,5 @@
 import * as React from "react";
-import {View} from 'react-native';
+import {View, TouchableHighlight} from 'react-native';
 import { Container, Header, Title, Content, Text, Button, Icon, Left, Right, Body ,Card,CardItem} from "native-base";
 import {Image  } from "react-native";
 import styles from "./styles";
@@ -34,11 +34,6 @@ class SfdrDetailsPage extends React.Component<Props, State> {
                 <Image source={logo} style={{ height: 178, marginTop: 10 }} />
 				</View>
 				<Text>SAN FELIPE DEL RIO CISD </Text>
-					<Card>
-           					
-					
-           				
-         			 </Card>
 					  <View style={{alignItems:'center'}}>
 				<Text> ADDRESS </Text>
 					</View>
@@ -47,8 +42,12 @@ class SfdrDetailsPage extends React.Component<Props, State> {
               						<Body>
                						 	<Text>315 Griner St.Del Rio, Texas - 78840	</Text>
 											<Text>Phone : (830) 778-4000</Text>
-											<Text>Superintendent:Dr.Carlos Rios</Text>
-											
+											<View style={{flexDirection: "row"}}>
+											<Text>Superintendent: </Text>
+											<TouchableHighlight onPress={() => this.props.navigation.navigate("SuperintendentPage")}>
+												<Text style={{ color: "#27ae60", fontWeight: "bold", }}>Carlos H. Rios</Text>
+											</TouchableHighlight>
+											</View>
              					 	</Body>
            					</CardItem>
          			 </Card>
@@ -61,8 +60,6 @@ class SfdrDetailsPage extends React.Component<Props, State> {
                						 	<Text>The San Felipe Del Rio CISD provides a safe and nurturing environment where
 											all sudents become contributring citizens prepared to compete and excel in an ever-changing world	
 										</Text>
-											
-											
              					 	</Body>
            					</CardItem>
          			 </Card>

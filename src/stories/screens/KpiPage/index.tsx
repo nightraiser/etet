@@ -30,9 +30,6 @@ class KpiPage extends React.Component<Props, State> {
 					data: [40, 60, 80, 120, 150],
 				}
 			]} */
-
-		
-		console.log(this.props);
 		return (
 			<Container style={styles.container}>
 				<Header>
