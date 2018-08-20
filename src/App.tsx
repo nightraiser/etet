@@ -15,6 +15,7 @@ import CalendarPage from "./container/CalendarContainer";
 import SearchPage from "./container/SearchPageContainer";
 import KpiPage from "./container/KpiContainer";
 import DistrictRatingPage from "./container/DistrictRatingPageContainer";
+import SfdrDetailsPageContainer from "./container/SfdrDetailsPageContainer";
 
 import TrusteesListPageContaier from "./container/TrusteesListPageContainer";
 import TrusteeDetailsPageContainer from "./container/TrusteeDetailsPageContainer";
@@ -24,6 +25,7 @@ import ContactPageContainer from "./container/ContactPageContainer";
 import NewsPage from "./container/NewsPageContainer";
 import TrasnportContainer from "./container/TransportContainer";
 import GMapsContainer from "./container/GMapsContainer";
+import SuperintendentPageContainer from "./container/SuperintendentPageContainer";
 const Drawer = DrawerNavigator(
 	{
 		Home: { screen: Home },
@@ -36,7 +38,11 @@ const Drawer = DrawerNavigator(
 );
 
 const App = StackNavigator(
+
+
 	{
+		SuperintendentPage:{screen:SuperintendentPageContainer},
+		SfdrDetailsPage:{screen:SfdrDetailsPageContainer},
 		GMaps:{screen:GMapsContainer},
 		BullyingPage : {screen: BullyingReportContainer},
 		RatingPage: {screen : DistrictRatingPage},

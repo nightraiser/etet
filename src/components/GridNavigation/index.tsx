@@ -18,12 +18,12 @@ class GridNavigation extends React.Component<Props, State> {
 		const param = this.props.navigation.state.params;
 		return (
 			<View>
-				<Row>
+				<Row style={{marginBottom:10,marginTop:10}}>
 					<Col>
 						<TouchableHighlight onPress={() => { this.props.navigation.navigate("RatingPage")}} >
 						<View style={{ alignItems: "center", padding: 5 }}>
 							<Icon  size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color} name="star"></Icon>
-							<Text>Ratings</Text>
+							<Text style={{marginTop:5}}>Ratings</Text>
 						</View>
 						</TouchableHighlight>
 					</Col>
@@ -31,7 +31,7 @@ class GridNavigation extends React.Component<Props, State> {
 						<TouchableHighlight onPress={() => { this.props.navigation.navigate("Kpi")}} >
 						<View style={{ alignItems: "center", padding: 5 }}>
 							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="bar-chart"></Icon>
-							<Text>KPI</Text>
+							<Text style={{marginTop:5}}>KPI</Text>
 						</View>
 						</TouchableHighlight>
 					</Col>
@@ -39,41 +39,41 @@ class GridNavigation extends React.Component<Props, State> {
 					<TouchableHighlight onPress={() => this.props.navigation.navigate("SearchPage", { name: "SearchPage", ...param })}>
 						<View style={{ alignItems: "center", padding: 5 }}>
 							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="university"></Icon>
-							<Text>Schools</Text>
+							<Text style={{marginTop:5}}>Schools</Text>
 						</View>
 						</TouchableHighlight>
 					</Col>
 				</Row>
-				<Row>
+				<Row style={{marginBottom:10,marginTop:10}}>
 					<Col>
 						<TouchableHighlight onPress={() => { this.props.navigation.navigate("TrusteesListPage") }} >
 						<View style={{ alignItems: "center", padding: 5 }}>
 							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="user-circle"></Icon>
-							<Text>Trustee</Text>
+							<Text style={{marginTop:5}}>Trustee</Text>
 						</View>
 						</TouchableHighlight>
 					</Col>
 					<Col>
 						<View style={{ alignItems: "center", padding: 5 }}>
 							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="cogs"></Icon>
-							<Text>Admin</Text>
+							<Text style={{marginTop:5}}>Admin</Text>
 						</View>
 					</Col>
 					<Col>
 						<TouchableHighlight onPress={() => { this.props.navigation.navigate("GMaps")}} >
 							<View style={{ alignItems: "center", padding: 5 }}>
 							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="map"></Icon>
-							<Text>Maps</Text>
+							<Text style={{marginTop:5}}>Maps</Text>
 						</View>
 					</TouchableHighlight>
 					</Col>
 				</Row>
-				<Row>
+				<Row style={{marginBottom:10,marginTop:10}}>
 					<Col>
 					<TouchableHighlight onPress={() => { this.props.navigation.navigate("NewsPage")}} >
 						<View style={{ alignItems: "center", padding: 5 }}>
 							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="rss"></Icon>
-							<Text>News</Text>
+							<Text style={{marginTop:5}}>News</Text>
 						</View>
 						</TouchableHighlight>
 					</Col>
@@ -81,7 +81,7 @@ class GridNavigation extends React.Component<Props, State> {
 						<TouchableHighlight onPress={() => { this.props.navigation.navigate("Calendar")}} >
 							<View style={{ alignItems: "center", padding: 5 }}>
 								<Icon size={styles.gridIcon.fontSize} color={styles.gridIcon.color} name="calendar"></Icon>
-								<Text>Calendar</Text>
+								<Text style={{marginTop:5}}>Calendar</Text>
 							</View>
 						</TouchableHighlight>
 					</Col>
@@ -89,7 +89,7 @@ class GridNavigation extends React.Component<Props, State> {
 						<TouchableHighlight onPress={() => { this.props.navigation.navigate("ContactPage", {...param})}} >
 							<View style={{ alignItems: "center", padding: 5 }}>
 							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="phone"></Icon>
-							<Text>Contact</Text>
+							<Text style={{marginTop:5}}>Contact</Text>
 							</View>
 						</TouchableHighlight>
 					</Col>
@@ -98,28 +98,28 @@ class GridNavigation extends React.Component<Props, State> {
 					<Col>
 						<View style={{ alignItems: "center", padding: 5 }}>
 							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="user"></Icon>
-							<Text>Student</Text>
+							<Text style={{marginTop:5}}>Student</Text>
 						</View>
 					</Col>
 					<Col>
 						<View style={{ alignItems: "center", padding: 5 }}>
 							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="users"></Icon>
-							<Text>Parent</Text>
+							<Text style={{marginTop:5}}>Parent</Text>
 						</View>
 					</Col>
 					<Col>
 						<View style={{ alignItems: "center", padding: 5 }}>
 							<Icon size = {styles.gridIcon.fontSize} color = {styles.gridIcon.color}   name="home"></Icon>
-							<Text>Employee</Text>
+							<Text style={{marginTop:5}}>Employee</Text>
 						</View>
 					</Col>
 				</Row>
-				<Row>
+				<Row style={{marginBottom:10,marginTop:10}}>
 					<Col>
 						<TouchableHighlight onPress={() => { this.props.navigation.navigate("TrasnportPage", { ...param }) }} >
 						<View style={{ alignItems: "center", padding: 5 }}>
 							<Icon size={styles.gridIcon.fontSize} color={styles.gridIcon.color} name="bus"></Icon>
-							<Text>Bus Tracking</Text>
+							<Text style={{marginTop:5}}>Bus Tracking</Text>
 						</View>
 						</TouchableHighlight>
 					</Col>

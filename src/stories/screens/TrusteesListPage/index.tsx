@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Container, Header, View, Title, Content, Text, Button, Icon, Left, Right, Body, Card, CardItem, Thumbnail, Spinner, Row, Col,
 	Item, Input } from "native-base";
+import {Image} from "react-native";
 import FooterNavigation from "../../../components/FooterNavigation";
 import CardFooterDataButton from "../../../components/CardFooterDataButton";
 import styles from "./styles";
@@ -27,13 +28,15 @@ class TrusteesPage extends React.Component<Props, State> {
 				return (
 					<Card key={index} style={{ flex: 0 }}>
 						<CardItem>
-							<Left>
-								<Thumbnail source={{ uri: item.ImagePath }} />
-								<Body>
+							<View>
+								<Image style={{width:60,height:60}} source={{ uri: item.ImagePath }} />
+							</View>
+							<View style={{paddingLeft:5}}>
+						
 									<Text>{item.fullName}</Text>
 									<Text note>{item.boardTrusteeTitle}</Text>
-								</Body>
-							</Left>
+								
+							</View>
 						</CardItem>
 						<CardItem>
 							<Body>
