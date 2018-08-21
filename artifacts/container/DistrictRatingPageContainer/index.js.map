@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../src/container/DistrictRatingPageContainer/index.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,KAAK,MAAM,OAAO,CAAC;AAC/B,OAAO,kBAAkB,MAAM,0CAA0C,CAAC;AAK1E,MAAM,CAAC,OAAO,kCAAmC,SAAQ,KAAK,CAAC,SAAuB;IACrF,MAAM;QACL,MAAM,CAAC,oBAAC,kBAAkB,IAAC,UAAU,EAAE,IAAI,CAAC,KAAK,CAAC,UAAU,GAAI,CAAC;IAClE,CAAC;CACD"}

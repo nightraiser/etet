@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../src/container/SfdrDetailsPageContainer/index.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,KAAK,MAAM,OAAO,CAAC;AAC/B,OAAO,eAAe,MAAM,uCAAuC,CAAC;AAKpE,MAAM,CAAC,OAAO,+BAAgC,SAAQ,KAAK,CAAC,SAAuB;IAClF,MAAM;QACL,MAAM,CAAC,oBAAC,eAAe,IAAC,UAAU,EAAE,IAAI,CAAC,KAAK,CAAC,UAAU,GAAI,CAAC;IAC/D,CAAC;CACD"}
